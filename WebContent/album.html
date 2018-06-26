@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Album Page</title>
+
+<!-- 自定义主题 -->
+<link href="" rel="stylesheet" type="text/css" media="all" />
+ 
+<link href="./css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />   <!-- 排版 -->
+<link rel="stylesheet" href="./css/flexslider.css" type="text/css" media="screen" property="" />   <!-- 按钮 -->
+<!-- 图标 -->
+<link href="./css/font-awesome.min.css" rel="stylesheet" />
+<!-- 网络图标 -->
+<link href="http://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+
+<style type="text/css">
+
+	html, body{
+	    font-size: 100%;
+		font-family: 'Open Sans', sans-serif;
+		background:#ffffff;
+		margin: 0;
+	}
+	p,ul li,ol li{
+		margin:0;
+		font-size:14px;
+	}
+	h1,h2,h3,h4,h5,h6{
+		font-family: 'Montserrat', sans-serif;
+		margin:0;
+	}
+	ul,label{
+		margin:0;
+		padding:0;
+	}
+	body a:hover{
+		text-decoration:none;
+	}
+	input[type="submit"],input[type="reset"],a,.w3l_banner_bottom_grid1 i,.w3layouts_more a i{
+		-webkit-transition: 0.5s ease-in;
+	    -moz-transition: 0.5s ease-in;
+	    -ms-transition: 0.5s ease-in;
+	    -o-transition: 0.5s ease-in;
+	    transition:0.5s ease-in;
+	}
+	a:focus{
+		outline:none;
+	}
+	
+/* 导航、nav */
+	.navbar-default {
+	    background: none;
+	    border: none;
+	}
+	.navbar {
+	    margin-bottom: 0;
+	}
+	.navbar-collapse {
+	    padding: 0;
+	}
+	.navbar-right {
+	    margin-right: 0;
+	}
+	.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	    color:#0bedff;
+	    background:none;
+	}
+	.navbar-default .navbar-nav > .active > a:before{
+		background:#fff;
+	}
+	.navbar-default .navbar-nav > li > a {
+	    font-weight: 600;
+	    letter-spacing: 1px;
+	}
+	.navbar-nav > li > a {
+	    margin: 0 2em;
+	    padding:.7em 0;
+	    text-transform: uppercase;
+	    
+	    font-family: '汉仪综艺体简',sans-serif;
+	}
+	.navbar-default .navbar-nav > li > a:hover{
+	    color:#0bedff;
+	}
+	.navbar-default .navbar-nav > li > a:focus {
+	    color: #fff;
+		outline:none;
+	}
+	nav.navbar.navbar-default {
+	    background: none;
+	    padding:2em 0 0;
+	}
+	.navbar-right {
+	    margin:0em 0 0;
+	}
+	.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+	    color:#fff;
+	    background: none;
+	}
+	.navbar-default .navbar-nav > li > a {
+	    color: #fff;
+	}
+	.navbar-default .navbar-nav  > .active.open > a:focus {
+		background:transparent;
+		color: #fff;
+	}
+	.navbar-default .navbar-brand,.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+	    color: #fff;
+	}
+	.navbar-brand {
+	    font-weight: 600;
+	    font-size: 45px;
+	    letter-spacing: 2px;
+		padding:0;
+		line-height:43px;
+	}
+	a.navbar-brand span {
+	    font-size: 1em;
+	    margin-right: 0.2em;
+	}
+	.agile_short_dropdown {
+	    border-radius: 0;
+	    background: #ffffff;
+	    text-align: center;
+		padding:0;
+		border: none;
+	}
+	.agile_short_dropdown li a{
+		text-transform:uppercase;
+		color:#212121;
+		font-size:13px;
+		font-weight:600;
+		padding: .8em 0;
+	}
+	.agile_short_dropdown li a:before,.agile_short_dropdown li a:after{
+		display:none;
+	}
+	.agile_short_dropdown > li > a:hover{
+	    color: #fff;
+	    text-decoration: none;
+	    background-color:#ffb262;
+	}
+	.link-effect-8 ul.nav li a {
+	  -moz-transition: ease-out 0.3s 0.1s;
+	  -o-transition: ease-out 0.3s 0.1s;
+	  -webkit-transition: ease-out 0.3s;
+	  -webkit-transition-delay: 0.1s;
+	  transition: ease-out 0.3s 0.1s;
+	  
+	  color: #fff;
+	}
+	.link-effect-8 ul.nav li a::before {
+	  height: 2px;
+	  width: 100%;
+	  content: "";
+	  position: absolute;
+	  left: 0;
+	  top: 0;
+	  visibility: hidden;
+	  -moz-transition: 0.3s;
+	  -o-transition: 0.3s;
+	  -webkit-transition: 0.3s;
+	  transition: 0.3s;
+	}
+	.link-effect-8 ul.nav li a::after {
+	  height: 2px;
+	  width: 100%;
+	  content: "";
+	  position: absolute;
+	  left: 0;
+	  top: 100%;
+	  visibility: hidden;
+	  -moz-transition: 0.3s;
+	  -o-transition: 0.3s;
+	  -webkit-transition: 0.3s;
+	  transition: 0.3s;
+	}
+	.link-effect-8 ul.nav li a:hover::before,.navbar-default .navbar-nav > .active > a::before {
+		visibility: visible;
+		top: 100%;
+		background: #0bedff;
+	}
+	.link-effect-8 ul.nav li a:hover::after,.navbar-default .navbar-nav > .active > a::after {
+	  visibility: visible;
+	  top: 0;
+	  background: #0bedff;
+	}
+	.navbar-header.navbar-left label {
+	    color:#0bedff;
+	    display: block;
+	    font-size: 12px;
+	    text-align: center;
+	    letter-spacing: 3px;
+	    font-weight: 600;
+	    margin-left: 5px;
+	}
+
+/*-- gallery --*/
+/*-- img-hover-effect --*/
+.adipoli-wrapper
+{
+    margin:auto;
+    position:relative;
+    display: inline-block;
+}
+.adipoli-wrapper>img
+{
+    position: absolute;
+    z-index: 1;
+}
+.adipoli-before
+{
+    position: absolute;
+    z-index: 5;
+}
+.adipoli-after
+{
+    position: absolute;
+    z-index: 10;
+}
+.adipoli-slice {
+    display:block;
+    position:absolute;
+    z-index:15;
+    height:100%;
+	background-size: cover !important;
+}
+.gal-w3l img {
+    width:100%!important;
+}
+.gal-w3l {
+    padding-left:5px!important;
+    padding-right:5px!important;
+    margin-bottom:4px;
+}
+#gallery {
+    background: #f4f4f4;
+}
+.gallery_gds {
+    margin-top: 3em;
+}
+/*-- //img-hover-effect --*/  
+/*-- //gallery --*/  
+
+/*-- footer --*/
+
+	.reach-wthree {
+		background: #1d1d1d;
+		padding: 2em 0;
+	}
+	
+	.reach-wthree h3 {
+		font-size: 2.5em;
+		font-weight: 800;
+		color: #fff;
+		margin-top: 0.7em;
+	}
+	.w3ls-form {
+	    text-align: center;
+	    margin: 3em 0;
+	}
+	.w3ls-form input[type="email"] {
+		display: inline-block;
+	    background: #333;
+	    border: none;
+	    width: 60%;
+	    outline: none;
+	    font-family: 'Lato', sans-serif;
+	    padding: 1em;
+	    font-size: .9em;
+	    color: #fff;
+	}
+	.w3ls-form button{
+	    color: #fff;
+	    font-size: .9em;
+	    padding: 1em;
+	    text-align: center;
+		cursor:pointer;
+	    text-decoration: none;
+	    background:#0bedff;
+	    border: solid 1px #0bedff;
+	    transition: 0.5s all;
+	    -webkit-transition: 0.5s all;
+	    -moz-transition: 0.5s all;
+	    -o-transition: 0.5s all;
+	    -ms-transition: 0.5s all;
+	}
+	.w3ls-form button:hover {
+	    background: none;
+	    border: solid 1px #eeaf1a;
+		color: #eeaf1a;
+	}
+	.map-w3-agileits {
+		padding: 1em 1em .7em;
+		background: #2f2f2f;
+	}
+	
+	.map-w3-agileits iframe {
+		width: 100%;
+		height: 400px;
+		border: none;
+	}
+	
+	.w3l_footer_agileinfo {
+		background: #333;
+		padding: 1.5em 0;
+		border-top: 1px ridge rgba(50, 50, 50, 0.57);
+		border-bottom: 1px ridge rgba(50, 50, 50, 0.57);
+	}
+	
+	.mailadd-w3ls {
+		text-align: left;
+		padding: 0;
+	}
+	
+	.mailadd-w3ls p {
+		font-size: 20px;
+		letter-spacing: 1px;
+	}
+	
+	.mailadd-w3ls p span {
+		font-size: 1.3em;
+		color: #0bedff;
+		letter-spacing: 1px;
+		margin-right: 10px;
+	}
+	
+	.mailadd-w3ls p a {
+		font-size: 16px;
+		color: #fff;
+		letter-spacing: 2px;
+	}
+	
+	.botttom-nav-agileits ul.nav-w3ls {
+		text-align: center;
+		margin-top: 5px;
+	}
+	
+	.botttom-nav-agileits ul.nav-w3ls li {
+		list-style: none;
+		display: inline-block;
+		margin: 0px 15px;
+	}
+	
+	.botttom-nav-agileits ul.nav-w3ls li a {
+		text-decoration: none;
+		color: #fff;
+		font-size: 16px;
+		text-transform: capitalize;
+		letter-spacing: 1px;
+	}
+	
+	.botttom-nav-agileits ul.nav-w3ls li:hover a {
+		color: #168eea;
+	}
+	.copy {
+	    text-align: center;
+	    padding: 1em 0;
+	    background: #1d1d1d;
+	}
+	.copy h2 {
+		float: left;
+	}
+	
+	.copy h2 a {
+		color: #0bedff;
+		font-size: 1.3em;
+		letter-spacing: 1.5px;
+		text-transform: capitalize;
+		text-decoration: none;
+	}
+	
+	.copy h2 a:hover,
+	.copy h2 a:focus {
+		text-decoration: none;
+		outline: none;
+	}
+	
+	.copy h2 a span {
+		color: #fff;
+	}
+	
+	.top-right-info-w3ls li i {
+		color: #fff;
+		padding-top: 8px;
+	}
+	
+	.top-right-info-w3ls li {
+		display: inline-block;
+		margin: 0px 4px;
+		width: 32px;
+		height: 32px;
+		background: #333;
+		border-radius: 50%;
+		-webkit-border-radius: 50%;
+		-o-border-radius: 50%;
+		-moz-border-radius: 50%;
+		-ms-border-radius: 50%;
+		transition: 0.5s all;
+		-webkit-transition: 0.5s all;
+		-moz-transition: 0.5s all;
+		-o-transition: 0.5s all;
+		-ms-transition: 0.5s all;
+		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.16);
+		-webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.16);
+		-moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.16);
+		-o-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.16);
+		-ms-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.16);
+	}
+	
+	.top-right-info-w3ls li:hover {
+		background: #168eea;
+		transition: 0.5s all;
+		-webkit-transition: 0.5s all;
+		-moz-transition: 0.5s all;
+		-o-transition: 0.5s all;
+		-ms-transition: 0.5s all;
+	}
+	
+	.w3l-social {
+		text-align: right;
+		padding: 0px;
+	}
+	
+	.top-right-info-w3ls {
+		text-align: center;
+		float: right;
+	}
+	.copy p {
+	    color: #fff;
+		float: right;
+	    font-size: 1.1em;
+	}
+	.copy p  a{
+	    color: #0bedff;
+	}
+	.copy p  a:hover{
+	    color: #0bedff;
+	}
+/*-- //Footer --*/
+
+/* amend */	
+	.copy {
+	    text-align: center;
+	    padding: 1em 0;
+	    background: #1d1d1d;
+	}
+	.copy h2 a {
+		float: left;
+		color: #fff;
+		
+	    /* color: #0bedff; */
+	    
+	    font-size: 1.3em;
+	    letter-spacing: 1.5px;
+	    text-transform: capitalize;
+	    text-decoration: none;
+	    
+	    transition: ease-out 0.3s 0.1s;
+	}
+	.copy h2 a:hover {
+		color: #0bedff;
+	}
+	
+	.nav > li > a:hover, .nav > li > a:focus {
+	    text-decoration: none;
+	    background-color: #eee0;
+	}
+	
+	.link-effect-8 ul.nav li a:hover {
+		color: #0bedff;
+	}
+	
+/* amend */
+.w3-head-center {
+	margin-top: 50px;
+}
+
+</style>
+</head>
+<body>
+<!--Copy-right-->
+	<div class="copy">
+		<div class="container">
+			<h2><a href="home.html">Zoom 归影</a></h2>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+				<nav class="link-effect-8" id="link-effect-8">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="home.html">首  页</a></li>
+						<li><a href="home.html#about" class="scroll">关  于</a></li>
+						<li><a href="home.html#services"  class="scroll">相  册</a></li>
+						<li><a href="home.html#team"  class="scroll">角  色</a></li>
+						<li><a href="home.html#contact"  class="scroll">联  系</a></li>
+						<li><a href="regist.html"  class="regist">注  册</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+<!--// Copy-right -->
+
+<!-- head -->
+
+<!-- //head -->
+
+<!-- gallery --> 
+	<div id="gallery" class="gallery">
+		<div class="container">
+			<div class="w3-head-center">
+		<h3>Album</h3>
+	</div>
+			<div class="gallery_gds">
+				<div class="col-md-4 gal-w3l">
+						<div class="agileits-img">
+							<a href="img/g1.jpg" class="swipebox" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus tortor diam, ac lobortis justo rutrum quis. Praesent non purus fermentum, eleifend velit non">
+								<img class="img-responsive img-style row2" src="img/g1.jpg" alt=""  /> 
+							</a> 
+						</div>
+					</div>
+					<div class="col-md-4 gal-w3l">
+						<div class="agileits-img">
+							<a href="img/g2.jpg" class="swipebox" title="Duis maximus tortor diam, ac lobortis justo rutrum quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non purus fermentum, eleifend velit non">
+								<img src="img/g2.jpg" alt="" class="img-responsive img-style row2" />
+							</a>	
+						</div>
+					</div>
+					<div class="col-md-4 gal-w3l">
+						<div class="agileits-img">
+							<a href="img/g3.jpg" class="swipebox" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus tortor diam, ac lobortis justo rutrum quis. Praesent non purus fermentum, eleifend velit non">
+								<img src="img/g3.jpg" alt="" class="img-responsive img-style row2" />
+							</a>	
+						</div>
+					</div>
+					<div class="col-md-4 gal-w3l">
+						<div class="agileits-img">
+							<a href="img/g4.jpg" class="swipebox" title="Praesent non purus fermentum, eleifend velit non Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus tortor diam, ac lobortis justo rutrum quis.">
+								<img src="img/g4.jpg" alt="" class="img-responsive img-style row2" />
+							</a>	
+						</div>
+					</div>
+					<div class="col-md-4 gal-w3l">
+						<div class="agileits-img">
+							<a href="img/g5.jpg" class="swipebox" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus tortor diam, ac lobortis justo rutrum quis. Praesent non purus fermentum, eleifend velit non">
+								<img src="img/g5.jpg" alt="" class="img-responsive img-style row2" />
+							</a>	
+						</div>
+					</div>
+					<div class="col-md-4 gal-w3l">
+						<div class="agileits-img">
+							<a href="img/g6.jpg" class="swipebox" title="Duis maximus tortor diam, ac lobortis justo rutrum quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non purus fermentum, eleifend velit non">
+								<img src="img/g6.jpg" alt="" class="img-responsive img-style row2" />
+							</a>	
+						</div>
+					</div>
+						<div class="col-md-4 gal-w3l">
+						<div class="agileits-img">
+							<a href="img/g7.jpg" class="swipebox" title="Praesent non purus fermentum, eleifend velit non Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus tortor diam, ac lobortis justo rutrum quis.">
+								<img src="img/g7.jpg" alt="" class="img-responsive img-style row2" />
+							</a>	
+						</div>
+					</div>
+					<div class="col-md-4 gal-w3l">
+						<div class="agileits-img">
+							<a href="img/g8.jpg" class="swipebox" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus tortor diam, ac lobortis justo rutrum quis. Praesent non purus fermentum, eleifend velit non">
+								<img src="img/g8.jpg" alt="" class="img-responsive img-style row2" />
+							</a>	
+						</div>
+					</div>
+					<div class="col-md-4 gal-w3l">
+						<div class="agileits-img">
+							<a href="img/g9.jpg" class="swipebox" title="Duis maximus tortor diam, ac lobortis justo rutrum quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non purus fermentum, eleifend velit non">
+								<img src="img/g9.jpg" alt="" class="img-responsive img-style row2" />
+							</a>	
+						</div>
+					</div>
+				   <div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>    
+<!-- //gallery -->
+
+<!-- Footer -->
+	<div class="reach-wthree" id="contact">
+		<div class="container">
+			<h3>联系我们</h3>
+			<div class="reach-right-agileits-w3layouts">
+				<div class="w3ls-form">
+				<form action="#" method="post">
+					<input type="email" placeholder="Email Id" name="Subscribe" required="">
+					<button class="btn1"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+				</form>
+			</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="w3l_footer_agileinfo">
+		<div class="container">
+			<div class="col-md-3 mailadd-w3ls">
+				<p><span class="fa fa-envelope" aria-hidden="true"></span><a href="mailto:info@example.com">13835603253@163.com</a></p>
+			</div>
+			<div class="col-md-6 botttom-nav-agileits">
+				<ul class="nav-w3ls">
+					<li><a href="home.html" class="scroll">首  页</a></li>
+					<li><a href="home.html#about"  class="scroll">关  于</a></li>
+					<li><a href="home.html#services"  class="scroll">相  册</a></li>
+					<li><a href="home.html#team"  class="scroll">角  色</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 w3l-social">
+				<ul class="top-right-info-w3ls">
+					<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+				</ul>
+			</div>
+
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	<!-- //Footer -->
+	<!--Copy-right-->
+	<div class="copy">
+		<div class="container">
+			<h2><a href="index.html">Zoom 归影</a></h2>
+			<p>BuErFan &copy; 流离之人追逐也很累的呀.<a target="_blank" href="">双体系</a></p>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	<!--// Copy-right -->
+	
+<!-- js -->
+	<script type="text/javascript" src="./js/jquery-2.1.4.min.js"></script>
+<!-- //js -->
+
+<!-- for bootstrap working -->
+	<script src="./js/bootstrap.js"></script>
+<!-- //for bootstrap working -->
+
+<!-- swipe box js -->
+	<script src="./js/jquery.adipoli.min.js" type="text/javascript"></script>
+	<script type="text/javascript"> 
+		$(function(){ 
+			$('.row2').adipoli({
+				'startEffect' : 'overlay',
+				'hoverEffect' : 'sliceDown'
+			}); 
+		});
+		
+	</script>
+	<script src="./js/jquery.swipebox.min.js"></script> 
+	<script type="text/javascript">
+			jQuery(function($) {
+				$(".swipebox").swipebox();
+			});
+	</script>
+<!-- //swipe box js -->
+
+</body>
+</html>

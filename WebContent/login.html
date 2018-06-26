@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login Page</title>
+
+<!-- 自定义主题 -->
+<link href="" rel="stylesheet" type="text/css" media="all" />
+ 
+<link href="./css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />   <!-- 排版 -->
+<link rel="stylesheet" href="./css/flexslider.css" type="text/css" media="screen" property="" />   <!-- 按钮 -->
+<!-- 图标 -->
+<link href="./css/font-awesome.min.css" rel="stylesheet" />
+<!-- 网络图标 -->
+<link href="http://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+
+<style type="text/css">
+
+	html, body{
+	    font-size: 100%;
+		font-family: 'Open Sans', sans-serif;
+		background:#ffffff;
+		margin: 0;
+	}
+	p,ul li,ol li{
+		margin:0;
+		font-size:14px;
+	}
+	h1,h2,h3,h4,h5,h6{
+		font-family: 'Montserrat', sans-serif;
+		margin:0;
+	}
+	ul,label{
+		margin:0;
+		padding:0;
+	}
+	body a:hover{
+		text-decoration:none;
+	}
+	input[type="submit"],input[type="reset"],a,.w3l_banner_bottom_grid1 i,.w3layouts_more a i{
+		-webkit-transition: 0.5s ease-in;
+	    -moz-transition: 0.5s ease-in;
+	    -ms-transition: 0.5s ease-in;
+	    -o-transition: 0.5s ease-in;
+	    transition:0.5s ease-in;
+	}
+	a:focus{
+		outline:none;
+	}
+	
+/* block */
+/* lay_main */
+.lay_wrap .lay_main {
+	top: 150px;
+	position: absolute;
+	width: 100%;
+}
+.lay_inner {
+	width: 1170px;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+}
+.login_head h1 {
+	color: #fff;
+	font-size: 45px;
+	font-weight: 600;
+	
+	letter-spacing: 2px;
+	padding: 0;
+	line-height: 43px;
+}
+.login_wrap {
+	width: 370px;
+	height: 270px;
+	border: 2px solid #eee;
+	border-radius: 4px;
+	
+	position: absolute;
+	overflow: hidden;
+	
+	right: 0;
+	top: 0;
+	
+	background: #fff;
+}
+.tips {
+	font-size: 20px;
+	color: #333;
+	margin-bottom: 16px;
+	text-align: center;
+}
+.login_form {
+	width: 310px;
+	margin: 0 auto;
+}
+.uinArea {
+	width: 310px;
+	height: 43px;
+	
+	margin: 30px auto;
+	position: relative;
+}
+.pwdArea {
+	width: 310px;
+	height: 43px;
+	
+	margin: 30px auto;
+	position: relative;
+}
+.inputstyle {
+	width: 304px;
+	padding: 7px 0 7px 7px;
+	
+	border: 2px solid #e4e4e4;
+	border-radius: 4px;
+	
+	transition: 0.3s ease-in;
+}
+.inputstyle:focus {
+	border: 2px solid #0bedff00;
+	box-shadow: 0 0 7px #0bedff;
+}
+.submit {
+	
+}
+.submit .btn {
+	width: 308px;
+	height: 41px;
+	border: 2px solid #0bedff;
+	
+	color: #333;
+	background:#fff;
+	text-align: center;
+	font-size: inherit;
+	
+	transition: 0.3s ease-in;
+}
+.submit .btn:hover {
+	background: #0bedff;
+	border: 2px solid #0bedff;
+	color: #fff;
+}
+
+
+/* block_background */
+.lay_background {
+ 	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 0;
+	overflow: hidden;
+}
+.lay_background_img {
+	width: 100%;
+	height: 100%;
+}
+
+
+
+/* lay_foot */
+.lay_foot {
+	position: absolute;
+	bottom: 5%;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	z-index: 2;
+}
+
+
+/*-- footer --*/
+
+	.w3l_footer_agileinfo {
+		padding: 1.5em 0;
+	}
+	
+	.mailadd-w3ls p span {
+		font-size: 1.3em;
+		color: #0bedff;
+		letter-spacing: 1px;
+		margin-right: 10px;
+	}
+	
+	.mailadd-w3ls p a {
+		font-size: 16px;
+		color: #fff;
+		letter-spacing: 2px;
+	}
+	
+	.botttom-nav-agileits ul.nav-w3ls {
+		text-align: center;
+		margin-top: 5px;
+	}
+	
+	.botttom-nav-agileits ul.nav-w3ls li {
+		list-style: none;
+		display: inline-block;
+		margin: 0px 15px;
+	}
+	
+	.botttom-nav-agileits ul.nav-w3ls li a {
+		text-decoration: none;
+		color: #fff;
+		font-size: 16px;
+		text-transform: capitalize;
+		letter-spacing: 1px;
+	}
+	
+	.botttom-nav-agileits ul.nav-w3ls li:hover a {
+		color: #0bedff;
+	}
+	.copy {
+	    text-align: center;
+	    padding: 1em 0;
+	}
+	.copy h2 {
+		float: left;
+	}
+	
+	.copy h2 a {
+		color: #0bedff;
+		font-size: 1.3em;
+		letter-spacing: 1.5px;
+		text-transform: capitalize;
+		text-decoration: none;
+	}
+	
+	.copy h2 a:focus {
+		text-decoration: none;
+		outline: none;
+	}
+	
+	.copy h2 a span {
+		color: #fff;
+	}
+	
+	.copy p {
+	    color: #fff;
+	    font-size: 1.1em;
+	}
+	.copy p  a{
+	    color: #0bedff;
+	}
+/*-- //Footer --*/
+
+/* amend */	
+
+</style>
+</head>
+<body>
+
+<!-- block -->
+	<div class = "lay_wrap">
+		<div class = "lay_main" style="z-index:999">
+			<div class = "lay_inner">
+				<div class = "login_head">
+					<a href = "home.html"><h1>Zoom <span>/</span>归影</h1></a>
+				</div>
+				<div class = "login_wrap">
+					<div class = "tips">
+						登录到归影
+					</div>
+					<div class = "login_form">
+						<form action="">
+							<div id = "uinArea" class = "uinArea">
+								<input id = "u" name = "u" class = "inputstyle" placeholder="用户名" type="text">
+							</div>
+							<div id = "pwdArea" class = "pwdArea">
+								<input id = "p" name = "p" class = "inputstyle password" placeholder="密码" type="text">
+							</div>
+							<div class = "submit">
+								<input id = "btn" name = "btn" class = "btn" value="登录" type="submit">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class = "lay_foot">
+			<div class="w3l_footer_agileinfo">
+				<div class="container" style="float: inline-end;">
+					<div class="col-md-3 mailadd-w3ls">
+						<p><span class="fa fa-envelope" aria-hidden="true"></span><a href="mailto:info@example.com">13835603253@163.com</a></p>
+					</div>
+					<div class="col-md-6 botttom-nav-agileits">
+						<ul class="nav-w3ls">
+							<li><a href="home.html" class="scroll">| 首  页 |</a></li>
+							<li><a href="home.html#about"  class="scroll">| 关  于 |</a></li>
+							<li><a href="home.html#services"  class="scroll">| 相  册 |</a></li>
+							<li><a href="home.html#team"  class="scroll">| 角  色 |</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- //Footer -->
+			<!--Copy-right-->
+			<div class="copy">
+				<div class="container">
+					<p>BuErFan &copy; 流离之人追逐也很累的呀.<a target="_blank" href="">双体系</a></p>
+				</div>
+			</div>
+			<!--// Copy-right -->
+		</div>
+	</div>
+	<div class = "lay_background">
+		<img class = "lay_background_img" alt="" src="./img/bg_6_.jpg">
+	</div>
+<!--// block -->
+
+
+	
+<!-- js -->
+	<script type="text/javascript" src="./js/jquery-2.1.4.min.js"></script>
+<!-- //js -->
+
+<!-- for bootstrap working -->
+	<script src="js/bootstrap.js"></script>
+<!-- //for bootstrap working -->
+
+
+</body>
+</html>
